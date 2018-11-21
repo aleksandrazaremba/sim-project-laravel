@@ -44,8 +44,13 @@ Route::get('/myprofile', [
     'as' => 'myprofile'
 ]);
 
-Route::get('/editprofile', [
-    'uses' => 'UsersController@editprofile',
+Route::get('/edit-profile', [
+    'uses' => 'EditprofileController@editprofile',
+    'as' => 'editprofile'
+]);
+
+Route::post('/edit-profile', [
+    'uses' => 'EditprofileController@saveeditprofile',
     'as' => 'editprofile'
 ]);
 
