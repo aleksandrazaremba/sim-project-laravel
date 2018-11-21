@@ -9,16 +9,14 @@ use Illuminate\Support\Facased\Auth;
 
 class SitesController extends Controller
 {
-    //zabezpieczenie logowania, przekierowuje add na login
-    public function __construct()
+    public function __construct()//zabezpieczenie logowania, przekierowuje add na login
     {
         $this->middleware('auth');
     }
 
     public function index()
     {
-        //pobranie rekordów
-        $sites = Site::all();
+        $sites = Site::all(); //pobranie rekordów
         return view('sites.index', compact('sites'));
     }
 
@@ -27,8 +25,7 @@ class SitesController extends Controller
         return view('sites.add');
     }
 
-    //zapisywanie
-    public function save(Request $request)
+    public function save(Request $request)   //zapisywanie
     {
         //dd($request->all());//debuguje to co siedzi w request
         //metoda 1
@@ -41,14 +38,11 @@ class SitesController extends Controller
         return view('sites.save');
     }
 
-    //musimy zatypować że$site jest typu Site żeby uzyskać dostęp do pełnej wartości
-    public function show(Site $site)
+    public function show(Site $site)//musimy zatypować że$site jest typu Site żeby uzyskać dostęp do pełnej wartości
     {
         //dd($site);
-        return view('sites.show', compact('site'));
+        return view('sites.show', compact('site')); //compact()przekazuje metodę
     }
-    //compact()przekazuje metodę
-
 
     public function listofusers()
     {

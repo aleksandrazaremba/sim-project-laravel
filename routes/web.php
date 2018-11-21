@@ -37,8 +37,7 @@ Route::get('/user/{user}', [
     'as' => 'sites.userprofile'
 ]);
 
-
-Route::get('/confirmeditprofile', ['uses' => 'UsersController@confirmeditprofile', 'as' => 'confirmeditprofile']);
+// Route::get('/confirmeditprofile', ['uses' => 'UsersController@confirmeditprofile', 'as' => 'confirmeditprofile']);
 
 Route::get('/myprofile', [
     'uses' => 'SitesController@myprofile',
@@ -49,12 +48,6 @@ Route::get('/editprofile', [
     'uses' => 'UsersController@editprofile',
     'as' => 'editprofile'
 ]);
-
-// Route::get('user/{user}', ['as' => 'users.editprofile', 'uses' => 'UsersController@editprofile']);
-// Route::patch('user/{user}/update', ['as' => 'users.update', 'uses' => 'UsersController@update']);
-
-
-
 
 Auth::routes();
 
