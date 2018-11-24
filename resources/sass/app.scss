@@ -1,35 +1,65 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 // Variables
-@import 'variables';
-
+@import "variables";
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
+@import "./bootstrap.min";
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-.c-main-menu__item {
-  color: red !important;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.c-main-menu__item {
+    color: blue !important;
+}
 
 input.hidden {
-  position: absolute;
-  left: -9999px;
+    position: absolute;
+    left: -9999px;
 }
 
 #profile-image1 {
-  cursor: pointer;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #03b1ce;
+}
 
-   width: 100px;
-  height: 100px;
-border:2px solid #03b1ce ;}
-.tital{ font-size:16px; font-weight:500;}
-   .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}	
+.tital {
+    font-size: 16px;
+    font-weight: 500;
+}
 
-  
-   
+.bot-border {
+    border-bottom: 1px #f8f8f8 solid;
+    margin: 5px 0 5px 0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #e72f83;
+    border-color: #e72f83;
+}
+
+a {
+    color: #e72f83;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #7e1a48;
+    text-shadow: 2px 2px 8px #e72f83;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #7E1A48;
+    opacity: 0.3;
+}
+
+.form-group {
+    display: flex;
+}

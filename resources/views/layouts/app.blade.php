@@ -55,15 +55,15 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
+                            <a class="nav-link" href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
                         </li>
                         @can('isDoctor')
                         <li class="nav-item c-main-menu__item">
-                            <a href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
+                            <a class="nav-link" href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
                         </li>
                         @endcan
                         <li class="nav-item">
-                            <a href="{{ route('sites') }}">{{ __('All posts') }}</a>
+                            <a class="nav-link" href="{{ route('sites') }}">{{ __('All posts') }}</a>
                         </li>
 
                         <li class="nav-item dropdown">
