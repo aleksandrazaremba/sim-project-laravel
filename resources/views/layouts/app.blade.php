@@ -26,7 +26,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: #31ACE0; ">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name') }}
@@ -57,11 +57,11 @@
                         <li class="nav-item">
                             <a href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
                         </li>
-
-
+                        @can('isDoctor')
                         <li class="nav-item c-main-menu__item">
                             <a href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
                         </li>
+                        @endcan
                         <li class="nav-item">
                             <a href="{{ route('sites') }}">{{ __('All posts') }}</a>
                         </li>
@@ -102,14 +102,18 @@
                 @yield('content')
             </div>
         </main>
-    </div>
-    <footer>
-        <div class="container-fluid bg-primary py-3">
+        <footer class="footer" style="position:fixed;
+        bottom: 0; display:block;
+        width: 100%;
+        height: 50px;
+        line-height: 60px;
+        background-color: #31ACE0;">
             <div class="container">
-
+                <span class="text-muted">SIM project 2018</span>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 </body>
 
 </html>
