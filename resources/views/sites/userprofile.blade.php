@@ -45,7 +45,8 @@
             </table>
         </div>
     </div>
-
-    <button class='btn btn-default'><a href='/listofusers'>Go back</a></button>
+    <div>
+        <button type="button" class="btn btn-light"><a href='/listofusers'>Go back</a></button>
+    </div>
 </div>
 @endsection

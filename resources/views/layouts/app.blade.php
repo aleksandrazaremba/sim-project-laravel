@@ -53,11 +53,11 @@
                             @if (Route::has('register'))
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> @endif
                         </li>
-                        @else
+                        @else @can('isDoctor', 'isInvestigator')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
                         </li>
-                        @can('isDoctor')
+                        @endcan @can('isDoctor')
                         <li class="nav-item c-main-menu__item">
                             <a class="nav-link" href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
                         </li>

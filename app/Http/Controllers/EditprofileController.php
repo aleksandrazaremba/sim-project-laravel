@@ -43,4 +43,17 @@ class EditprofileController extends Controller
 
         return redirect('edit-profile');
     }
+
+
+    // public function destroy(User $user)
+    // {
+    //     User::where('id', $id)->delete();
+    //     return redirect()->back();
+    // }
+
+    // public function destroy(User $user)
+    // {
+    //     User::where('id', $id)->delete();
+    //     return redirect('listofusers');
+    // }
 }

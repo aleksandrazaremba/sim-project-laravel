@@ -54,6 +54,15 @@ Route::post('/edit-profile', [
     'as' => 'editprofile'
 ]);
 
+// Route::post('/destroy/{user}', [
+//     'uses' => 'EditprofileController@destroy',
+//     'as' => 'users.destroy'
+// ]);
+
+
+Route::get('delete-records', 'UserDeleteController@index');
+Route::get('delete/{id}', 'UserDeleteController@destroy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
