@@ -19,7 +19,5 @@ class UserDeleteController extends Controller
     {
         DB::delete('delete from users where id = ?', [$id]);
         return redirect('listofusers');
-        // echo "Record deleted successfully.<br/>";
-        // echo '<a href = "/listofusers">Click Here</a> to go back.';
     }
 }

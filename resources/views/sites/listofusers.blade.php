@@ -5,9 +5,9 @@
 <h6>you can display the patient's profile by clicking on it</h6>
 <br>
 
-<table class="table table-hover">
+<table class="table table-hover table-striped">
         <br>
-        <tr>
+        <tr class="thead-dark">
 
                 <th>type</th>
                 <th>name</th>
@@ -15,7 +15,9 @@
                 <th>address</th>
                 <th>location</th>
                 <th>gender</th>
+                @can('isDoctor')
                 <th>delete</th>
+                @endcan
         </tr>
         @foreach($users as $user)
         <tr>
@@ -25,38 +27,14 @@
                 <td>{{$user->address}}</td>
                 <td>{{$user->location}}</td>
                 <td>{{$user->sex}}</td>
+                @can('isDoctor')
                 <td>
-
-                        @can('isDoctor')
-                        <button type="button" class="btn btn-danger">
-                                        {{-- <form  --}}
-                                        {{-- action='{{ route('users.destroy', $user->id)}}' method='POST' id="delete-form-{{$user->id}}" style="display: none;">
-                                                {{csrf_field()}}
-                                                {{method_field('DELETE')}} --}}
-                                                
-                                            {{-- </form> --}}
-                                            {{-- <a href='' 
-                                            onclick="if(confirm('Are you sure, You want to delete this?')){
-                                                event.preventDefault();
-                                                document.getElementById('delete-form-{{$user->id}}').submit();
-                                            }else{
-                                                event.preventDefault();
-                                            } " --}}
-                                            {{-- >
-                                                  Delete
-                                            </a> --}}
-
-                                            <a href = 'delete/{{ $user->id }}' onclick="return confirm('Are you sure you want to delete this item?');"
-                                            >Delete</a>
-                                </button> @endcan
+                        <button type="button" class="btn btn-danger">    
+                        <a href = 'delete/{{ $user->id }}' onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+                </button>
                 </td>
+                @endcan
         </tr>
         @endforeach
-
-
-
-
-
-
 </table>
 @endsection

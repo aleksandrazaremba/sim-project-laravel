@@ -57,7 +57,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
                         </li>
-                        @endcan @can('isDoctor')
+                        @endcan @can('isDoctor', 'isInvestogator')
                         <li class="nav-item c-main-menu__item">
                             <a class="nav-link" href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
                         </li>
@@ -110,6 +110,8 @@
         background-color: #31ACE0;">
             <div class="container">
                 <span class="text-muted">SIM project 2018</span>
+                <a href="https://www.linkedin.com/in/aleksandra-zaremba-a30952137/" target="_blank"><img src="/img/linkedin.png" alt="linkedin" height="25" width="25"></a>
+                <a href="https://github.com/aleksandrazaremba/" target="_blank"> <img src='/img/githubicon.png' alt="github" height="25" width="25"/></a>
             </div>
         </footer>
     </div>

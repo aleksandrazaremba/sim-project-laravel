@@ -46,7 +46,8 @@ class SitesController extends Controller
 
     public function listofusers()
     {
-        $users = User::all();
+        // $users = User::all();
+        $users = User::where('type', 'patient')->get();
         return view('sites.listofusers', compact('users'));
     }
 
