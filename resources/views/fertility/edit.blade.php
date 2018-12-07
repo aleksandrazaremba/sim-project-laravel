@@ -30,7 +30,11 @@
                         <div class="form-group{{ $errors->has('homem_tem_filhos') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Man with children:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="homem_tem_filhos" value="{{ $errors->has('homem_tem_filhos') ? '' : $user->homem_tem_filhos }}">                                @if ($errors->has('homem_tem_filhos'))
+                                {{-- <input type="text" class="form-control" name="homem_tem_filhos" value="{{ $errors->has('homem_tem_filhos') ? '' : $user->homem_tem_filhos }}">                                --}}
+                                <select class="form-control" name='homem_tem_filhos' value="{{ $user->homem_tem_filhos }}">
+                                        <option value="1" name="yes" <?php echo($user->homem_tem_filhos === 1 ? "selected" : '') ?>>Yes</option>
+                                        <option value="0" name="no" <?php echo($user->homem_tem_filhos === 0 ? "selected" : '') ?>>No</option>
+                                    </select> @if ($errors->has('homem_tem_filhos'))
                                 <span class="help-block">
                                                             <strong>{{ $errors->first('homem_tem_filhos') }}</strong>
                                                         </span> @endif
@@ -48,7 +52,15 @@
                         <div class="form-group{{ $errors->has('m_etnia') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Male etnic:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="m_etnia" value="{{ $errors->has('m_etnia') ? '' : $user->m_etnia }}">                                @if ($errors->has('m_etnia'))
+                                {{-- <input type="text" class="form-control" name="m_etnia" value="{{ $errors->has('m_etnia') ? '' : $user->m_etnia }}">                                --}}
+                                <select class="form-control" name='m_etnia' value="{{ $user->m_etnia }}">
+                                    <option value="1" name="asian" <?php echo($user->m_etnia === 1 ? "selected" : '') ?>>Asian</option>
+                                    <option value="2" name="caucasoid" <?php echo($user->m_etnia === 2 ? "selected" : '') ?>>Caucasoid</option>
+                                    <option value="3" name="gipsy" <?php echo($user->m_etnia === 3 ? "selected" : '') ?>>Gipsy</option>
+                                    <option value="4" name="indian" <?php echo($user->m_etnia === 4 ? "selected" : '') ?>>Indian</option>
+                                    <option value="5" name="mixed" <?php echo($user->m_etnia === 5 ? "selected" : '') ?>>Mixed</option>
+                                    <option value="6" name="black" <?php echo($user->m_etnia === 6 ? "selected" : '') ?>>Black</option>
+                                </select> @if ($errors->has('m_etnia'))
                                 <span class="help-block">
                                                         <strong>{{ $errors->first('m_etnia') }}</strong>
                                                     </span> @endif
@@ -72,7 +84,11 @@
                         <div class="form-group{{ $errors->has('mulher_tem_filhos') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Woman has kids:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="mulher_tem_filhos" value="{{ $errors->has('mulher_tem_filhos') ? '' : $user->mulher_tem_filhos }}">                                @if ($errors->has('mulher_tem_filhos'))
+                                <select class="form-control" name='mulher_tem_filhos' value="{{ $user->mulher_tem_filhos }}">
+                                    <option value="1" name="yes" <?php echo($user->mulher_tem_filhos === 1 ? "selected" : '') ?>>Yes</option>
+                                    <option value="0" name="no" <?php echo($user->mulher_tem_filhos === 0 ? "selected" : '') ?>>No</option>
+                                </select> {{-- <input type="text" class="form-control" name="mulher_tem_filhos"
+                                    value="{{ $errors->has('mulher_tem_filhos') ? '' : $user->mulher_tem_filhos }}"> --}} @if($errors->has('mulher_tem_filhos'))
                                 <span class="help-block">
                                                             <strong>{{ $errors->first('mulher_tem_filhos') }}</strong>
                                                         </span> @endif
@@ -126,7 +142,12 @@
                         <div class="form-group{{ $errors->has('f_tabaco') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Woman smoking:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="f_tabaco" value="{{ $errors->has('f_tabaco') ? '' : $user->f_tabaco }}">                                @if ($errors->has('f_tabaco'))
+                                <select class="form-control" name='f_tabaco' value="{{ $user->f_tabaco }}">
+                                    <option value="1" name="used_to" <?php echo($user->f_tabaco === 1 ? "selected" : '') ?>>Used to</option>
+                                    <option value="2" name="never" <?php echo($user->f_tabaco === 2 ? "selected" : '') ?>>Never</option>
+                                    <option value="3" name="smokes" <?php echo($user->f_tabaco === 3 ? "selected" : '') ?>>Smokes</option>
+                                </select> {{-- <input type="text" class="form-control" name="f_tabaco"
+                                    value="{{ $errors->has('f_tabaco') ? '' : $user->f_tabaco }}"> --}} @if ($errors->has('f_tabaco'))
                                 <span class="help-block">
                                                                                     <strong>{{ $errors->first('f_tabaco') }}</strong>
                                                                                 </span> @endif
@@ -135,7 +156,16 @@
                         <div class="form-group{{ $errors->has('f_etnia') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Female ethnic:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="f_etnia" value="{{ $errors->has('f_etnia') ? '' : $user->f_etnia }}">                                @if ($errors->has('f_etnia'))
+                                {{-- <input type="text" class="form-control" name="f_etnia" value="{{ $errors->has('f_etnia') ? '' : $user->f_etnia }}">                                --}}
+
+                                <select class="form-control" name='f_etnia' value="{{ $user->f_etnia }}">
+                                    <option value="1" name="asian" <?php echo($user->f_etnia === 1 ? "selected" : '') ?>>Asian</option>
+                                    <option value="2" name="caucasoid" <?php echo($user->f_etnia === 2 ? "selected" : '') ?>>Caucasoid</option>
+                                    <option value="3" name="gipsy" <?php echo($user->f_etnia === 3 ? "selected" : '') ?>>Gipsy</option>
+                                    <option value="4" name="indian" <?php echo($user->f_etnia === 4 ? "selected" : '') ?>>Indian</option>
+                                    <option value="5" name="mixed" <?php echo($user->f_etnia === 5 ? "selected" : '') ?>>Mixed</option>
+                                    <option value="6" name="black" <?php echo($user->f_etnia === 6 ? "selected" : '') ?>>Black</option>
+                                </select> @if ($errors->has('f_etnia'))
                                 <span class="help-block">
                                                                                         <strong>{{ $errors->first('f_etnia') }}</strong>
                                                                                     </span>                                @endif
