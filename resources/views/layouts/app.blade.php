@@ -101,6 +101,7 @@
             <div class="container">
                 @yield('content')
             </div>
+            <div style="height: 30px"></div>
         </main>
         <footer class="footer" style="position:fixed;
         bottom: 0; display:block;

@@ -27,5 +27,23 @@ $factory->define(App\User::class, function (Faker $faker) {
         'sex' => $faker->sex,
         'allergies' => $faker->allergies,
         'remember_token' => str_random(10),
+
+
+        'afc' => $faker->afc,
+        'amh' => $faker->amh,
+        'homem_tem_filhos' => $faker->homem_tem_filhos,
+        'idadeelementofeminino' => $faker->idadeelementofeminino,
+        'm_etnia' => $faker->m_etnia,
+        'm_tabaco' => $faker->m_tabaco,
+        'mulher_tem_filhos' => $faker->mulher_tem_filhos,
+        'duracaoinfertilidade' => $faker->duracaoinfertilidade,
+        'pesoelementofeminino' => $faker->pesoelementofeminino,
+        'imcelementofeminino' => $faker->imcelementofeminino,
+        'imcelementomasculino' => $faker->imcelementomasculino,
+        'idadeelementomasculino' => $faker->idadeelementomasculino,
+        'f_tabaco' => $faker->f_tabaco,
+        'f_etnia' => $faker->f_etnia,
+        'notes' => $faker->notes,
+    
     ];
 });

@@ -18,10 +18,8 @@
 Route::get('/', ['uses' => 'SitesController@index','as' => 'sites']);
 
 Route::get('/add', ['uses' => 'SitesController@add','as' => 'sites.add']);
-Route::post('/save', [
-    'uses' => 'SitesController@save',
-    'as' => 'sites.save'
-]);
+Route::post('/save', ['uses' => 'SitesController@save','as' => 'sites.save']);
+
 Route::get('/site/{site}', [
     'uses' => 'SitesController@show',
     'as' => 'sites.show'
@@ -46,7 +44,6 @@ Route::get('/edit-profile', [
     'uses' => 'EditprofileController@editprofile',
     'as' => 'editprofile'
 ]);
-
 Route::post('/edit-profile', [
     'uses' => 'EditprofileController@saveeditprofile',
     'as' => 'editprofile'
@@ -54,6 +51,18 @@ Route::post('/edit-profile', [
 
 Route::get('delete-records', 'UserDeleteController@index');
 Route::get('delete/{id}', 'UserDeleteController@destroy');
+
+
+// Route::get('/fertility.edit', 'FertilityController@edit');
+Route::get('/fertility-edit/{user?}', [
+    'uses' => 'FertilityController@edit',
+    'as' => 'fertility.edit'
+]);
+
+Route::post('/fertility-edit', [
+    'uses' => 'FertilityController@save',
+    'as' => 'fertility.saveEdit'
+]);
 
 
 
