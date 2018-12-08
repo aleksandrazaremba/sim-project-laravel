@@ -14,13 +14,13 @@ class AddParametersToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('afc');
-            $table->decimal('amh');
-            $table->integer('homem_tem_filhos');
-            $table->integer('idadeelementofeminino');
-            $table->integer('m_etnia');
-            $table->integer('m_tabaco');
-            $table->integer('mulher_tem_filhos');
+            $table->integer('afc')->nullable();
+            $table->decimal('amh')->nullable();
+            $table->integer('homem_tem_filhos')->nullable();
+            $table->integer('idadeelementofeminino')->nullable();
+            $table->integer('m_etnia')->nullable();
+            $table->integer('m_tabaco')->nullable();
+            $table->integer('mulher_tem_filhos')->nullable();
 
             $table->integer('duracaoinfertilidade')->nullable();
             $table->integer('pesoelementofeminino')->nullable();

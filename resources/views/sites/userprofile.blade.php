@@ -2,15 +2,22 @@
 @section('page-title', 'Profile') 
 @section('content')
 
-<h3>User info:</h3>
-<div>
-    <button type="button" class="btn btn-light"><a href='/listofusers'>Go back</a></button> @can('isDoctor')
-    <button type="button" class="btn btn-warning"><a href="{{ route('fertility.edit', $user) }}">Edit</a></button> @endcan
+<div class="userprofile-first">
+    <h3>User info:</h3>
+    <div class="userprofile-first-buttons">
+        <button type="button" class="btn btn-light"><a href='/listofusers'>Go back</a></button> @can('isDoctor')
+        <button type="button" class="btn btn-warning"><a href="{{ route('fertility.edit', $user) }}">Edit</a></button> @endcan
+    </div>
 </div>
 <div class="col-md-12">
     <div class="card">
         <div class="card-body">
             <h2 class="card-title">{{$user->name}}</h2>
+            <div>
+                <p>Classification:
+
+                </p>
+            </div>
             @can('isDoctor')
             <table class="table table-user-information table-striped table-hover col-md-6" style="float: left">
                 <tbody>

@@ -9088,24 +9088,43 @@ input.hidden {
   border-color: #e72f83;
 }
 
-a {
+.a-color-pink {
   color: #e72f83;
 }
 
-a:hover {
+.a-color-pink:hover {
   text-decoration: none;
   color: #7e1a48;
   text-shadow: 2px 2px 8px #e72f83;
 }
 
+.a-color-white {
+  color: white;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: #7E1A48;
+  background-color: #7e1a48;
   opacity: 0.3;
 }
 
 .form-group {
   display: flex;
+}
+
+button a {
+  color: black;
+}
+
+.userprofile-first {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=app.css.map */

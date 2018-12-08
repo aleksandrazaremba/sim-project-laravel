@@ -53,7 +53,6 @@ Route::get('delete-records', 'UserDeleteController@index');
 Route::get('delete/{id}', 'UserDeleteController@destroy');
 
 
-// Route::get('/fertility.edit', 'FertilityController@edit');
 Route::get('/fertility-edit/{user?}', [
     'uses' => 'FertilityController@edit',
     'as' => 'fertility.edit'

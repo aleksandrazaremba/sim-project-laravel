@@ -40,13 +40,11 @@ class SitesController extends Controller
 
     public function show(Site $site)//musimy zatypować że$site jest typu Site żeby uzyskać dostęp do pełnej wartości
     {
-        //dd($site);
         return view('sites.show', compact('site')); //compact()przekazuje metodę
     }
 
     public function listofusers()
     {
-        // $users = User::all();
         $users = User::where('type', 'patient')->get();
         return view('sites.listofusers', compact('users'));
     }

@@ -9,7 +9,6 @@ use App\Http\Controllers\Controller;
 
 class UserDeleteController extends Controller
 {
-    //
     public function index()
     {
         $users = DB::select('select * from users');

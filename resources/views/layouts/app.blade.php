@@ -53,11 +53,11 @@
                             @if (Route::has('register'))
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> @endif
                         </li>
-                        @else @can('isDoctor', 'isInvestigator')
+                        @else @cannot('isPatient')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('listofusers') }}">{{ __('List of users') }}</a>
                         </li>
-                        @endcan @can('isDoctor', 'isInvestogator')
+                        @endcannot @can('isDoctor', 'isInvestigator')
                         <li class="nav-item c-main-menu__item">
                             <a class="nav-link" href="{{ route('sites.add') }}">{{ __('Add post') }}</a>
                         </li>
@@ -101,18 +101,20 @@
             <div class="container">
                 @yield('content')
             </div>
-            <div style="height: 30px"></div>
+            <div style="height: 60px"></div>
         </main>
         <footer class="footer" style="position:fixed;
         bottom: 0; display:block;
         width: 100%;
-        height: 50px;
+        height: 60px;
         line-height: 60px;
         background-color: #31ACE0;">
-            <div class="container">
+            <div class="container footer">
                 <span class="text-muted">SIM project 2018</span>
-                <a href="https://www.linkedin.com/in/aleksandra-zaremba-a30952137/" target="_blank"><img src="/img/linkedin.png" alt="linkedin" height="25" width="25"></a>
-                <a href="https://github.com/aleksandrazaremba/" target="_blank"> <img src='/img/githubicon.png' alt="github" height="25" width="25"/></a>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/aleksandra-zaremba-a30952137/" target="_blank"><img src="/img/linkedin.png" alt="linkedin" height="35" width="35"></a>
+                    <a href="https://github.com/aleksandrazaremba/" target="_blank"> <img src='/img/githubicon.png' alt="github" height="35" width="35"/></a>
+                </div>
             </div>
         </footer>
     </div>

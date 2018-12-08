@@ -6,40 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Auth;
-
 use DB;
 
 class FertilityController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    //   public function editprofile(User $user)
-//     {
-//         return view('users.editprofile', compact('user'));
-//     }
-
     public function edit(User $user)
     {
-        // $user = User::find('$id');
-        // $user = User::find($id);
-        // $user = DB::select('select * from users');
         return view('fertility.edit', ['user'=>$user]);
     }
 
     public function save(Request $input)
     {
-        // $this->validate($input, [
-        // 'name' => 'required|max:255',
-        // 'password' => 'min:6|confirmed'
-        //     ]);
-
-        // $user = User::where('type', 'patient')->get();
-        // $user = User::all();
         $user = User::find($input["userId"]);
-        // DB::update('update users set name = ? where id = ?',[$name,$id]);
       
         $user->afc = $input["afc"];
         $user->amh = $input["amh"];
