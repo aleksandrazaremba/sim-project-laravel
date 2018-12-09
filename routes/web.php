@@ -65,7 +65,10 @@ Route::post('/fertility-edit', [
 
 Route::get('/test/{id}', [
     'uses' => 'ClassificationController@show',
-);
+    'as' => 'fertility.test'
+]);
+
+
 
 
 Auth::routes();

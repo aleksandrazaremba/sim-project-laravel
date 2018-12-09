@@ -1,4 +1,7 @@
 <?php
+
+$zapytanie = mysql_query("SELECT * FROM `users`") or die(mysql_error());
+
 /*Terminal Node 1*/
 $afc = 'AFC'; 
 $amh = 'AMH';
