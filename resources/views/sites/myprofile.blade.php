@@ -23,22 +23,86 @@
                             <td>Address</td>
                             <td>{{Auth::user()->address}}</td>
                         </tr>
+
                         <tr>
-                            <tr>
-                                <td>Location</td>
-                                <td>{{Auth::user()->location}}</td>
-                            </tr>
-                            <tr>
-                                <td>Gender</td>
-                                <td>{{Auth::user()->sex}}</td>
-                            </tr>
-                            <tr>
-                                <td>Date of birth</td>
-                                <td>{{Auth::user()->dateofbirth}}</td>
-                            </tr>
+                            <td>Location</td>
+                            <td>{{Auth::user()->location}}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{Auth::user()->sex}}</td>
+                        </tr>
+                        <tr>
+                            <td>Date of birth</td>
+                            <td>{{Auth::user()->dateofbirth}}</td>
+                        </tr>
+                        <tr>
                             <td>Allergies</td>
                             <td> {{Auth::user()->allergies}}</td>
                         </tr>
+                        @can('isPatient')
+                        <tr>
+                            <td>AFC:</td>
+                            <td>{{$user->afc}}</td>
+                        </tr>
+                        <tr>
+                            <td>AMH:</td>
+                            <td>{{$user->amh}}</td>
+                        </tr>
+                        <tr>
+                            <td>Man with children:</td>
+                            <td>{{$user->homem_tem_filhos}}</td>
+                        </tr>
+                        <tr>
+                            <td>Woman's age:</td>
+                            <td>{{$user->idadeelementofeminino}}</td>
+                        </tr>
+                        <tr>
+                            <td>Male etnic:</td>
+                            <td>{{$user->m_etnia}}</td>
+                        </tr>
+                        <tr>
+                            <td>Male smokes:</td>
+                            <td>{{$user->m_tabaco}}</td>
+                        </tr>
+                        <tr>
+                            <td>Woman has kids:</td>
+                            <td>{{$user->mulher_tem_filhos}}</td>
+                        </tr>
+                        <tr>
+                            <td>Duration of infertility:</td>
+                            <td>{{$user->duracaoinfertilidade}}</td>
+                        </tr>
+                        <tr>
+                            <td>Woman's weight:</td>
+                            <td>{{$user->pesoelementofeminino}}</td>
+                        </tr>
+                        <tr>
+                            <td>IMB of woman (% fat):</td>
+                            <td>{{$user->imcelementofeminino}}</td>
+                        </tr>
+                        <tr>
+                            <td>IMB of man (% fat):</td>
+                            <td>{{$user->imcelementomasculino}}</td>
+                        </tr>
+                        <tr>
+                            <td>Man's age:</td>
+                            <td>{{$user->idadeelementomasculino}}</td>
+                        </tr>
+                        <tr>
+                            <td>Woman smoking:</td>
+                            <td>{{$user->f_tabaco}}</td>
+                        </tr>
+                        <tr>
+                            <td>Female ethnic:</td>
+                            <td>{{$user->f_etnia}}</td>
+                        </tr>
+                        <tr>
+                            <td>Notes:</td>
+                            <td>{{$user->notes}}</td>
+                        </tr>
+                        @endcan
+
                     </tbody>
                 </table>
             </div>
