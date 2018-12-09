@@ -40,7 +40,7 @@
                             <td>Allergies</td>
                             <td> {{Auth::user()->allergies}}</td>
                         </tr>
-                        @can('isPatient')
+                        {{-- @can('isPatient')
                         <tr>
                             <td>AFC:</td>
                             <td>{{$user->afc}}</td>
@@ -101,7 +101,7 @@
                             <td>Notes:</td>
                             <td>{{$user->notes}}</td>
                         </tr>
-                        @endcan
+                        @endcan --}}
 
                     </tbody>
                 </table>
