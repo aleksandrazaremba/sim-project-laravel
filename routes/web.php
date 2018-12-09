@@ -63,7 +63,9 @@ Route::post('/fertility-edit', [
     'as' => 'fertility.saveEdit'
 ]);
 
-
+Route::get('/test/{id}', [
+    'uses' => 'ClassificationController@show',
+);
 
 
 Auth::routes();
