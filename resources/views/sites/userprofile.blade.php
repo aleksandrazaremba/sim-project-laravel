@@ -14,8 +14,8 @@
         <div class="card-body">
             <h2 class="card-title">{{$user->name}}</h2>
             <div>
-                <p>Classification:
-
+                <p>Classification: @if($class == 0) Classify to treatment @elseif($class == 1) There is no need to treatment!
+                    @elseif($class == -1) Cannot be classified! @endif
                 </p>
             </div>
             @can('isDoctor')
