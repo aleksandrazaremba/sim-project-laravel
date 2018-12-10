@@ -43,63 +43,63 @@
                         @can('isPatient')
                         <tr>
                             <td>AFC:</td>
-                            <td>{{$user->afc}}</td>
+                            <td>{{Auth::user()->afc}}</td>
                         </tr>
                         <tr>
                             <td>AMH:</td>
-                            <td>{{$user->amh}}</td>
+                            <td>{{Auth::user()->amh}}</td>
                         </tr>
                         <tr>
                             <td>Man with children:</td>
-                            <td>{{$user->homem_tem_filhos}}</td>
+                            <td>{{Auth::user()->homem_tem_filhos}}</td>
                         </tr>
                         <tr>
                             <td>Woman's age:</td>
-                            <td>{{$user->idadeelementofeminino}}</td>
+                            <td>{{Auth::user()->idadeelementofeminino}}</td>
                         </tr>
                         <tr>
                             <td>Male etnic:</td>
-                            <td>{{$user->m_etnia}}</td>
+                            <td>{{Auth::user()->m_etnia}}</td>
                         </tr>
                         <tr>
                             <td>Male smokes:</td>
-                            <td>{{$user->m_tabaco}}</td>
+                            <td>{{Auth::user()->m_tabaco}}</td>
                         </tr>
                         <tr>
                             <td>Woman has kids:</td>
-                            <td>{{$user->mulher_tem_filhos}}</td>
+                            <td>{{Auth::user()->mulher_tem_filhos}}</td>
                         </tr>
                         <tr>
                             <td>Duration of infertility:</td>
-                            <td>{{$user->duracaoinfertilidade}}</td>
+                            <td>{{Auth::user()->duracaoinfertilidade}}</td>
                         </tr>
                         <tr>
                             <td>Woman's weight:</td>
-                            <td>{{$user->pesoelementofeminino}}</td>
+                            <td>{{Auth::user()->pesoelementofeminino}}</td>
                         </tr>
                         <tr>
                             <td>IMB of woman (% fat):</td>
-                            <td>{{$user->imcelementofeminino}}</td>
+                            <td>{{Auth::user()->imcelementofeminino}}</td>
                         </tr>
                         <tr>
                             <td>IMB of man (% fat):</td>
-                            <td>{{$user->imcelementomasculino}}</td>
+                            <td>{{Auth::user()->imcelementomasculino}}</td>
                         </tr>
                         <tr>
                             <td>Man's age:</td>
-                            <td>{{$user->idadeelementomasculino}}</td>
+                            <td>{{Auth::user()->idadeelementomasculino}}</td>
                         </tr>
                         <tr>
                             <td>Woman smoking:</td>
-                            <td>{{$user->f_tabaco}}</td>
+                            <td>{{Auth::user()->f_tabaco}}</td>
                         </tr>
                         <tr>
                             <td>Female ethnic:</td>
-                            <td>{{$user->f_etnia}}</td>
+                            <td>{{Auth::user()->f_etnia}}</td>
                         </tr>
                         <tr>
                             <td>Notes:</td>
-                            <td>{{$user->notes}}</td>
+                            <td>{{Auth::user()->notes}}</td>
                         </tr>
                         @endcan
 
